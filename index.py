@@ -16,7 +16,7 @@ def account():
 
 @app.route("/")
 def index():
-    homepage = "<h1>資管二B楊承恩求職資訊</h1>"
+    homepage = "<h1>資管二B楊承恩求職資訊1114</h1>"
     homepage += "<a href=/today>相關工作介紹</a><br>"
     homepage += "<a href=/welcome?nick=楊子青>傳送使用者暱稱</a><br>"
     homepage += "<a href=/about>職涯測驗結果</a><br>"
