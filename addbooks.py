@@ -37,3 +37,8 @@ docs = [
   "url": "https://mis3-seven.vercel.app/",
   "anniversary": 20
 }
+
+]
+collection_ref = db.collection("圖書精選")
+for doc in docs:
+  collection_ref.add(doc)
