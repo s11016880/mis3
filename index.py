@@ -35,7 +35,8 @@ def index():
     homepage += "<br><a href=/read>人選之人演員名單1</a><br>"
     homepage += "<a href=/spider>網路爬蟲抓取子青老師課程</a><br>"
     homepage += "<br><a href=/movie>讀取開眼電影即將上映影片，寫入Firestore</a><br>"
-    homepage += "<br><a href=/search>讀取開眼電影即將上映影片</a><br>"
+    homepage += "<br><a href=/searchQ>讀取開眼電影即將上映影片</a><br>"
+    
 
 
 
@@ -113,7 +114,9 @@ def movie():
 
     db = firestore.client()
     doc_ref = db.collection("電影").document(movie_id)
-    doc_ref.set(doc)
+    doc_ref.set(doc)    
+  return "近期上映電影已爬蟲及存檔完畢，網站最近更新日期為：" + lastUpdate 
+
 @app.route("/searchQ", methods=["POST","GET"])
 def searchQ():
     if request.method == "POST":
@@ -132,7 +135,9 @@ def searchQ():
     else:  
         return render_template("input.html")
 
-    
+
+
+
 
 
     
